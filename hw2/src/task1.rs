@@ -22,10 +22,13 @@ fn find_term(search_term: &str, quote: &str) -> String {
     for item in quote.split("\n") {
         i += 1;
         if item.contains(search_term) {
-            format!("{i}: {item}")
+
+            return format!("{i}: {item}")
+
         }
     }
-    "Not Found"
+
+    "Not Found".to_string()
 
 }
 

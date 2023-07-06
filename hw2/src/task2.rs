@@ -12,24 +12,31 @@
 fn main() {}
 
 struct Rect {
-    // TODO
+    start_x: f32,
+    start_y: f32,
+    length: f32,
 }
+
 
 impl Rect {
     fn new(top_left: (f32, f32), width: f32) -> Self {
-        todo!()
+        Self {
+            start_x: top_left.0,
+            start_y: top_left.1,
+            length: width,
+        }
     }
 
     fn bottom_right(&self) -> (f32, f32) {
-        todo!()
+        (self.start_x + self.length, self.start_y + self.length)
     }
 
     fn area(&self) -> f32 {
-        todo!()
+        self.length.powf(2.0)
     }
 
     fn perimeter(&self) -> f32 {
-        todo!()
+        self.length * 4.0
     }
 }
 
